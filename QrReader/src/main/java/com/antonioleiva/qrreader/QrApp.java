@@ -2,7 +2,6 @@ package com.antonioleiva.qrreader;
 
 import android.app.Application;
 import android.content.Context;
-import com.jakewharton.scalpel.*;
 import dagger.ObjectGraph;
 import timber.log.Timber;
 
@@ -13,7 +12,7 @@ public class QrApp extends Application {
     @Override public void onCreate() {
         super.onCreate();
 
-        if (com.jakewharton.scalpel.BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }
 
